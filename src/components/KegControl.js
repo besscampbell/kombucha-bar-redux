@@ -54,13 +54,13 @@ class KegControl extends React.Component {
 
   handleKegInView = (id) => {
     const { dispatch } = this.props;
-    const kegList = this.props.kegMenu;
+    // const kegList = this.props.kegMenu;
     const action = {
       type: 'SELECT_KEG',
       id,
-      kegMenu: kegList
     }
     dispatch(action);
+
     // const selectedKeg = this.state.masterKegMenu.filter(keg => keg.id === id)[0];
     // this.setState({kegInView: selectedKeg});
   }
@@ -69,7 +69,8 @@ class KegControl extends React.Component {
     // const untappedKegs = this.props.selectedKeg.untappedKegs;
     // const restockedKeg = {...this.props.selectedKeg, untappedKegs:(untappedKegs + 1)};
     const { dispatch } = this.props;
-    const { brand, flavor, pricePerPint, kegPrice, untappedKegs, pintsRemaining, id } = this.props.selectedKeg;
+    const kegId = this.props.selectedKeg;
+    const { brand, flavor, pricePerPint, kegPrice, untappedKegs, pintsRemaining, id } = this.props.kegMenu[kegId];
     const action = {
       type: 'ADD_KEG',
       brand,
@@ -91,7 +92,8 @@ class KegControl extends React.Component {
     // const pintsRemaining = this.props.selectedKeg.pintsRemaining;
     // const updatedKeg = {...this.props.selectedKeg, pintsRemaining:(pintsRemaining - 1)};
     const { dispatch } = this.props;
-    const { brand, flavor, pricePerPint, kegPrice, untappedKegs, pintsRemaining, id } = this.props.selectedKeg;
+    const kegId = this.props.selectedKeg;
+    const { brand, flavor, pricePerPint, kegPrice, untappedKegs, pintsRemaining, id } = this.props.kegMenu[kegId];
     const action = {
       type: 'ADD_KEG',
       brand,
@@ -104,7 +106,7 @@ class KegControl extends React.Component {
     }
     dispatch(action);
     console.log(this.props.kegMenu[id]);
-    console.log(this.props.kegMenu);
+    // console.log(this.props.kegMenu);
     this.handleKegInView(id);
     console.log(this.props.selectedKeg);
 
@@ -125,7 +127,8 @@ class KegControl extends React.Component {
     //   alert("You cannot tap a keg if you have pints left or if you have no keg to replace it. ");
     // }
     const { dispatch } = this.props;
-    const { brand, flavor, pricePerPint, kegPrice, untappedKegs, id } = this.props.selectedKeg;
+    const kegId = this.props.selectedKeg;
+    const { brand, flavor, pricePerPint, kegPrice, untappedKegs, id } = this.props.kegMenu[kegId];
     const action = {
       type: 'ADD_KEG',
       brand,
@@ -144,7 +147,9 @@ class KegControl extends React.Component {
     let visibleNow = null;
     let buttonText = null;
     if(this.props.selectedKeg != null){
-      visibleNow = <KegSpecs keg={this.props.selectedKeg} onRestock={this.handleRestock} onBuy={this.handleBuy} onTapNewKeg={this.handleTapNewKeg}/>
+      const selectedKeg = this.props.kegMenu[this.props.selectedKeg];
+      console.log(selectedKeg);
+      visibleNow = <KegSpecs keg={selectedKeg} onRestock={this.handleRestock} onBuy={this.handleBuy} onTapNewKeg={this.handleTapNewKeg}/>
       buttonText="Booch Menu"
     } else if (!this.props.formView){
       visibleNow = <KegMenu kegMenu={this.props.kegMenu} onKegSelection={this.handleKegInView}/>
@@ -165,7 +170,7 @@ class KegControl extends React.Component {
 }
 
 KegControl.propTypes = {
-  selectedKeg: PropTypes.object,
+  selectedKeg: PropTypes.string,
   formView: PropTypes.bool,
   kegMenu: PropTypes.object,
 }
