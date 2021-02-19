@@ -49,4 +49,34 @@ describe('rootReducer', () => {
     store.dispatch(action);
     expect(store.getState().formView).toEqual(formViewReducer(true, action));
   });
+
+  test('Check that SELECT_KEG action works for selectedKegReducer and rootReducer', () => {
+    const kegMenu = {
+      1: {
+      brand: 'Brew Dr.',
+      flavor: 'Uplift',
+      pricePerPint: 3.50,
+      kegPrice: 270.00,
+      untappedKegs: 1,
+      pintsRemaining: 12,
+      id: 1
+      },
+      2: {
+      brand: 'GTs Synergy',
+      flavor: 'Trilogy',
+      pricePerPint: 3.75,
+      kegPrice: 315.00,
+      untappedKegs: 0,
+      pintsRemaining: 99,
+      id: 2
+      }
+    }
+    const action = {
+      type: 'SELECT_KEG',
+      id: 2,
+      kegMenu,
+    }
+    store.dispatch(action);
+    expect(store.getState().selectedKeg).toEqual(selectedKegReducer(null, action));
+  });
 });
