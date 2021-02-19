@@ -93,5 +93,23 @@ describe('kegMenuReducer', () => {
         id: 2
         }
     });
-  })
+  });
+
+  test('Should successfully delete a keg', () => {
+    action = {
+      type: 'DELETE_KEG',
+      id: 2
+    };
+    expect(kegMenuReducer(currentState, action)).toEqual({
+      1: {
+        brand: 'Brew Dr.',
+        flavor: 'Uplift',
+        pricePerPint: 3.50,
+        kegPrice: 270.00,
+        untappedKegs: 1,
+        pintsRemaining: 12,
+        id: 1
+        }
+    });
+  });
 });
