@@ -22,4 +22,8 @@ describe('rootReducer', () => {
   test('Check that initial state of kegMenuReducer matches root reducer', () => {
     expect(store.getState().kegMenu).toEqual(kegMenuReducer({}, {type: null}));
   });
+
+  test('Check that initial state of selectedKegReducer matches root reducer', () => {
+    expect(store.getState().selectedKeg).toEqual(selectedKegReducer(null, {type: null}));
+  });
 });
