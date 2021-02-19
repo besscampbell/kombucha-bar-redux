@@ -4,6 +4,8 @@ export default (state = {}, action) => {
     case 'SELECT_KEG':
       const selectedTicket = kegMenu[id];
       return selectedTicket;
+    case 'DESELECT':
+      return null;
     default:
       return state;
   }
