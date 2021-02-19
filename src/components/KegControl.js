@@ -101,6 +101,7 @@ class KegControl extends React.Component {
       id,
     }
     dispatch(action);
+
     // const newMasterKegMenu = this.state.masterKegMenu.filter(keg => keg.id !== this.state.kegInView.id).concat(updatedKeg);
     // this.setState({kegInView: updatedKeg,
                   // masterKegMenu: newMasterKegMenu});
