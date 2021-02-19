@@ -15,7 +15,11 @@ describe('rootReducer', () => {
     });
   });
 
-  test('Check that initial stat of formViewReducer matches root reducer', () => {
-    expect(store.getState().formView).toEqual(formViewReducer(undefined, {type: null}));
+  test('Check that initial state of formViewReducer matches root reducer', () => {
+    expect(store.getState().formView).toEqual(formViewReducer(true, {type: null}));
+  });
+
+  test('Check that initial state of kegMenuReducer matches root reducer', () => {
+    expect(store.getState().kegMenu).toEqual(kegMenuReducer({}, {type: null}));
   });
 });
