@@ -11,6 +11,6 @@ describe('formViewReducer', () => {
     let action = {
       type: 'TOGGLE_FORM'
     }
-    expect(formViewReducer())
+    expect(formViewReducer(currentState, action)).toEqual(false);
   });
 });
