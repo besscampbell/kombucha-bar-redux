@@ -8,15 +8,33 @@
 </p>
 
 <p align="center">
-  <small>Last Updated: February 12th, 2021</small>
+  <small>Last Updated: February 19th, 2021</small>
 </p>
 
 # ℹ️ Description
 
- Tap Room, Friday Project for Epicodus<br>
-This will be a two-week project. Spend today building a tap room in React where a bar or kombucha store can track their kegs. This could also be a soda fountain or another kind of tracker - as long as you're able to track the remaining amount and meet the objectives, you can be creative with this prompt.
+ Check out part one [here](https://github.com/besscampbell/kombucha-bar.git). This is the second part of a two-section project. At the end of the last section's independent project, you built a tap room using local and shared state in React. For this independent project, you will update your application to incorporate Redux.
 
-Before getting started, plan out your application and draw a component tree or component diagram that shows the structure of your components. This is a requirement for the project and should be included in your README. You may draw the structure on a piece of paper and take a picture of it or use an application like https://www.draw.io/.
+ Before getting started, clone or fork the repo of the project you completed at the end of the last section. Do not make changes to the repository you submitted for the last independent project. You will be asked to resubmit if you simply update the previous independent project repository.
+
+ Here are the requirements for the refactor:
+
+* All state in your application should be handled by Redux (even if React can handle it locally).
+* All reducers should be tested thoroughly, and all tests must be passing.
+* Action creators and constants should be used.
+* If you finish early, continue building out your application as you see fit. This is a great opportunity to create a portfolio piece!
+
+# ✅ Objectives
+
+This independent project's progress will be checked for the following objectives:
+
+* React application works as expected and follows best practices, including using JSX, props, and prop types.
+* Redux is used for all state.
+* Jest is used to test all reducers.
+* Actions and action constants are used.
+* Project is in a polished, portfolio-quality state.
+* Project is submitted by the deadline.
+* Project demonstrates an understanding of this section's concepts. If prompted, you can discuss your code with an instructor using the correct terminology.
 
 # 💁🏽‍♀️ User Stories
 
@@ -44,7 +62,6 @@ Here are some user stories to get you started. The application should have the f
 
 # 📊 Components Diagram
 
-![Components Diagram](./ReadMeAssets/Kombucha-components-diagram.png)
 
 # 🧑‍💻 Contributer
 
@@ -93,6 +110,11 @@ Once the project has been cloned and you have all the necessary items on your lo
 2. Once the install has finished  type `npm run build` into the terminal to compile the project
 3. Run `npm start` to view the site in a browser.
 
+### To test:
+
+1. Navigate to the `__tests__` folder in the project file tree.
+2. Run `npm test` and you see a return of which tests are passing/failing in the terminal.
+
 # ☎️ Support / Contact Details
 
 * [Bess Campbell](mailto:bess.k.campbell@gmail.com)
@@ -102,7 +124,7 @@ Once the project has been cloned and you have all the necessary items on your lo
 
 | Date | Error | Handled | Solution |
 | :------------- | :------------- | :------------- | :------------- |
-|2.13.20201|Buttons not hiding | ✅  |Correct hidden conditional and propTypes verbage  |
+|2.13.2021|Buttons not hiding | ✅  |Correct hidden conditional and propTypes verbage  |
 
 
 
