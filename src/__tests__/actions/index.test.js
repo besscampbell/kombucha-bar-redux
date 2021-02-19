@@ -36,7 +36,7 @@ describe('kombucha bar actions', () => {
   });
 
   it('deselect should create DESELECT action', () => {
-    expect(actions.deslect()).toEqual({
+    expect(actions.deselect()).toEqual({
       type: c.DESELECT,
     });
   });

@@ -29,5 +29,5 @@ export const selectKeg = (id) => ({
 });
 
 export const deselect = () => ({
-  // type: c.DESELECT,
+  type: c.DESELECT,
 });
