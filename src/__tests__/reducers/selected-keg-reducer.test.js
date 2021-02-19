@@ -24,6 +24,18 @@ describe('selectedKegReducer', () => {
     id: 2
     }
   }
+
+  const currentState =
+    {
+    brand: 'Brew Dr.',
+    flavor: 'Uplift',
+    pricePerPint: 3.50,
+    kegPrice: 270.00,
+    untappedKegs: 1,
+    pintsRemaining: 12,
+    id: 1
+    }
+
   test('Should return default state if no action type is passed in', () => {
     expect(selectedKegReducer(null, {type: null })).toEqual(null);
   });
@@ -32,7 +44,7 @@ describe('selectedKegReducer', () => {
     action = {
       type: 'SELECT_KEG',
       id: 1,
-      kegMenu: kegMenu
+      kegMenu,
     }
     expect(selectedKegReducer(null, action)).toEqual(
         {
@@ -45,5 +57,12 @@ describe('selectedKegReducer', () => {
         id: 1
         }
     );
+  });
+
+  test('Should return to null when DESELECT action type is pass in', () => {
+    const action = {
+      type: 'DESELECT',
+    }
+    expect(selectedKegReducer(currentState, action)).toEqual(null);
   });
 });
