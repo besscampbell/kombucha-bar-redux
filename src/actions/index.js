@@ -21,9 +21,9 @@ export const toggleForm = () => ({
   type: 'TOGGLE_FORM'
 });
 
-// export const selectKeg = (id) => {
-//   return {
+export const selectKeg = (id) => ({
+
 //     type: 'SELECT_KEG',
 //     id,
-//   }
-// };
+// 
+});

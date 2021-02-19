@@ -24,6 +24,13 @@ describe('kombucha bar actions', () => {
   it('toggleForm should create TOGGLE_FORM action', () => {
     expect(actions.toggleForm()).toEqual({
       type: 'TOGGLE_FORM'
+    });
+  });
+
+  it('selectKeg should create SELECT_KEG action', () => {
+    expect(actions.selectKeg(2)).toEqual({
+      type: 'SELECT_KEG',
+      id: 2,
     })
   })
 });
