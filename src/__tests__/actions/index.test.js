@@ -11,6 +11,13 @@ describe('kombucha bar actions', () => {
       untappedKegs: 1,
       pintsRemaining: 34,
       id: 1
-    })
-  })
-})
+    });
+  });
+
+  it('deleteKeg should create DELETE_KEG action', () => {
+    expect(actions.deleteKeg(1)).toEqual({
+      type: 'DELETE_TICKET',
+      id: 1
+    });
+  });
+});
