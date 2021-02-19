@@ -1,14 +1,14 @@
 export const addKeg = (keg) => {
-  // const { brand, flavor, pricePerPint, kegPrice, untappedKegs, pintsRemaining, id } = keg;
-  // return {
-  //   type: 'ADD_KEG',
-  //   brand,
-  //   flavor,
-  //   pricePerPint,
-  //   kegPrice,
-  //   untappedKegs,
-  //   pintsRemaining,
-  //   id,
+  const { brand, flavor, pricePerPint, kegPrice, untappedKegs, pintsRemaining, id } = keg;
+  return {
+    type: 'ADD_KEG',
+    brand,
+    flavor,
+    pricePerPint,
+    kegPrice,
+    untappedKegs,
+    pintsRemaining,
+    id,
   }
 };
 
