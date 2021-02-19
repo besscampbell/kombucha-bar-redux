@@ -13,8 +13,8 @@ export const addKeg = (keg) => {
 };
 
 export const deleteKeg = (id) => ({
-  // type: 'DELETE_KEG',
-  // id,
+  type: 'DELETE_KEG',
+  id,
 });
 
 // export const toggleForm = () => ({
