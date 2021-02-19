@@ -1,3 +1,19 @@
 export default (state = {}, action) => {
-  return state;
+  const { brand, flavor, pricePerPint, kegPrice, untappedKegs, pintsRemaining, id, type } = action;
+  switch(type){
+    case 'ADD_KEG':
+      return Object.assign({}, state, {
+        [id]: {
+          brand,
+          flavor,
+          pricePerPint,
+          kegPrice,
+          untappedKegs,
+          pintsRemaining,
+          ids
+        }
+      });
+    default:
+      return state;
+  }
 };
