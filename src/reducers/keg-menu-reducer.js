@@ -10,7 +10,7 @@ export default (state = {}, action) => {
           kegPrice,
           untappedKegs,
           pintsRemaining,
-          ids
+          id
         }
       });
     default:
