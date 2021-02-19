@@ -41,4 +41,12 @@ describe('rootReducer', () => {
     store.dispatch(action);
     expect(store.getState().kegMenu).toEqual(kegMenuReducer({}, action));
   });
+
+  test('Check that TOGGLE_FORM action works for formViewReducer and rootReducer', () => {
+    const action = {
+      type: 'TOGGLE_FORM'
+    }
+    store.dispatch(action);
+    expect(store.getState().formView).toEqual(formViewReducer(true, action));
+  });
 });
