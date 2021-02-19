@@ -23,7 +23,7 @@ function KegMenu(props){
 }
 
 KegMenu.propTypes = {
-  kegMenu: PropTypes.array,
+  kegMenu: PropTypes.object,
   onKegSelection: PropTypes.func
 }
 

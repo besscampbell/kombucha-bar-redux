@@ -54,10 +54,11 @@ class KegControl extends React.Component {
 
   handleKegInView = (id) => {
     const { dispatch } = this.props;
+    const kegList = this.props.kegMenu;
     const action = {
       type: 'SELECT_KEG',
       id,
-      kegMenu: this.props.kegMenu
+      kegMenu: kegList
     }
     dispatch(action);
     // const selectedKeg = this.state.masterKegMenu.filter(keg => keg.id === id)[0];
@@ -80,6 +81,7 @@ class KegControl extends React.Component {
       id,
     }
     dispatch(action);
+    this.handleKegInView(id);
         // const newMasterKegMenu = this.state.masterKegMenu.filter(keg => keg.id !== this.state.kegInView.id).concat(restockedKeg);
     // this.setState({kegInView: restockedKeg,
                   // masterKegMenu: newMasterKegMenu});
@@ -101,6 +103,10 @@ class KegControl extends React.Component {
       id,
     }
     dispatch(action);
+    console.log(this.props.kegMenu[id]);
+    console.log(this.props.kegMenu);
+    this.handleKegInView(id);
+    console.log(this.props.selectedKeg);
 
     // const newMasterKegMenu = this.state.masterKegMenu.filter(keg => keg.id !== this.state.kegInView.id).concat(updatedKeg);
     // this.setState({kegInView: updatedKeg,
@@ -131,6 +137,7 @@ class KegControl extends React.Component {
       id,
     }
     dispatch(action);
+    this.handleKegInView(id);
   }
 
   render(){
