@@ -3,8 +3,8 @@ export default (state = null, action) => {
   switch(type){
     case 'SELECT_KEG':
       return id;
-    case 'DESELECT':
-      return null;
+    // case 'DESELECT':
+    //   return null;
     default:
       return state;
   }

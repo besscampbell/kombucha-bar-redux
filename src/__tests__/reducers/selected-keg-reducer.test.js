@@ -14,10 +14,10 @@ describe('selectedKegReducer', () => {
     expect(selectedKegReducer(null, action)).toEqual(1);
   });
 
-  test('Should return to null when DESELECT action type is pass in', () => {
-    const action = {
-      type: 'DESELECT',
-    }
-    expect(selectedKegReducer(1, action)).toEqual(null);
-  });
+  // test('Should return to null when DESELECT action type is pass in', () => {
+  //   const action = {
+  //     type: 'DESELECT',
+  //   }
+  //   expect(selectedKegReducer(1, action)).toEqual(null);
+  // });
 });
