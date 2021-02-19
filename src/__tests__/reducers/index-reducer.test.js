@@ -26,4 +26,19 @@ describe('rootReducer', () => {
   test('Check that initial state of selectedKegReducer matches root reducer', () => {
     expect(store.getState().selectedKeg).toEqual(selectedKegReducer(null, {type: null}));
   });
+
+  test("Check that ADD_KEG action works for kegMenuReducer and rootReducer", () => {
+    const action = {
+      type: 'ADD_KEG',
+      brand: 'Brew Dr.',
+      flavor: 'Uplift',
+      pricePerPint: 3.50,
+      kegPrice: 270.00,
+      untappedKegs: 1,
+      pintsRemaining: 12,
+      id: 1
+    }
+    store.dispatch(action);
+    expect(store.getState().kegMenu).toEqual(kegMenuReducer({}, action));
+  });
 });
