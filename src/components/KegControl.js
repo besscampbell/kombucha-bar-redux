@@ -2,6 +2,7 @@ import React from 'react';
 import KegMenu from './KegMenu';
 import KegSpecs from './KegSpecs';
 import NewKeg from './NewKeg';
+import { connect } from 'react-redux';
 
 class KegControl extends React.Component {
   constructor(props) {
@@ -89,4 +90,19 @@ class KegControl extends React.Component {
   }
 }
 
+KegControl.propTypes = {
+  selectedKeg: PropTypes.object,
+  formView: propTypes.bool,
+  kegMenu: PropTypes.object,
+}
+
+const mapStateToProps = state => {
+  return {
+    selectedKeg: state.selectedKeg,
+    formView: state.formView,
+    kegMenu: state.kegMenu,
+  }
+}
+
+KegControl = connect(mapStateToProps)(KegControl);
 export default KegControl;
