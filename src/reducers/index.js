@@ -4,5 +4,9 @@ import selectedKegReducer from './selected-keg-reducer';
 import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
-
+  formView: formViewReducer,
+  selectedKeg: selectedKegReducer,
+  kegMenu: kegMenuReducer,
 });
+
+export default rootReducer;
