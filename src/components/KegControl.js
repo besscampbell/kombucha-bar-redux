@@ -19,11 +19,19 @@ class KegControl extends React.Component {
     }
   }
 
-  handleAddNewKeg = (newKeg) =>{
+  handleAddNewKeg = (newKeg) => {
     const { dispatch } = this.props;
     const action = a.addKeg(newKeg);
     dispatch(action);
     const action2 = a.toggleForm();
+    dispatch(action2);
+  }
+
+  handleDeleteKeg = (id) => {
+    const { dispatch } = this.props;
+    const action = a.deleteKeg(id);
+    dispatch(action);
+    const action2 = a.deselect();
     dispatch(action2);
   }
 
@@ -71,6 +79,7 @@ class KegControl extends React.Component {
         onRestock={this.handleRestock}
         onBuy={this.handleBuy}
         onTapNewKeg={this.handleTapNewKeg}
+        onDelete={this.handleDeleteKeg}
       />
       buttonText="Booch Menu"
     } else if (!this.props.formView){

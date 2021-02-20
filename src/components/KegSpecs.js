@@ -27,7 +27,8 @@ function KegSpecs(props) {
       <h3>Pints remaining: {availability}</h3>
       <button type="button" onClick={props.onRestock} className="btn btn-primary">Restock</button>
       <button hidden={keg.pintsRemaining === 0} type="button" onClick={props.onBuy} className="btn btn-success">Pint Pour</button>
-      <button hidden={keg.pintsRemaining !== 0 || keg.untappedKegs === 0} type="button" onClick={props.onTapNewKeg} className="btn btn-danger">Tap Keg</button>
+      <button hidden={keg.pintsRemaining !== 0 || keg.untappedKegs === 0} type="button" onClick={props.onTapNewKeg} className="btn btn-warning">Tap Keg</button>
+      <button type="button" onClick={() => props.onDelete(keg.id)} className="btn btn-danger">Delete Keg Info</button>
     </React.Fragment>
   );
 }
@@ -36,7 +37,8 @@ KegSpecs.propTypes = {
   keg: PropTypes.object,
   onRestock: PropTypes.func,
   onBuy: PropTypes.func,
-  onTapNewKeg: PropTypes.func
+  onTapNewKeg: PropTypes.func,
+  onDelete: PropTypes.func,
 }
 
 export default KegSpecs;
