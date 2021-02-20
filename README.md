@@ -60,9 +60,6 @@ Here are some user stories to get you started. The application should have the f
 * As a user, I want to have kegs prices to be color-coded for easy readability. This could be based on their price, the style of beer or kombucha, or the amount of pints left.
 * As a user, I want this application to be nicely styled. (Use stylesheets and CSS objects!)
 
-# 📊 Components Diagram
-
-
 # 🧑‍💻 Contributer
 
 | Name | GitHub Profile |
