@@ -22,7 +22,7 @@
 * All state in your application should be handled by Redux (even if React can handle it locally).
 * All reducers should be tested thoroughly, and all tests must be passing.
 * Action creators and constants should be used.
-* If you finish early, continue building out your application as you see fit. This is a great opportunity to create a portfolio piece!
+* If you finish early, continue building out your application as you see fit. This is a great opportunity to create a portfolio piece.
 
 # ✅ Objectives
 
