@@ -1,4 +1,5 @@
 import formViewReducer from '../../reducers/form-view-reducer';
+import * as c from './../../actions/ActionTypes';
 
 const currentState = true
 
@@ -9,7 +10,7 @@ describe('formViewReducer', () => {
 
   test('Should correctly toggle boolean',  () => {
     let action = {
-      type: 'TOGGLE_FORM'
+      type: c.TOGGLE_FORM
     }
     expect(formViewReducer(currentState, action)).toEqual(false);
   });

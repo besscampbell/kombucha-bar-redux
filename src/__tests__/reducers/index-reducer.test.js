@@ -3,6 +3,7 @@ import { createStore } from 'redux';
 import formViewReducer from '../../reducers/form-view-reducer';
 import kegMenuReducer from '../../reducers/keg-menu-reducer';
 import selectedKegReducer from '../../reducers/selected-keg-reducer';
+import * as c from './../../actions/ActionTypes';
 
 let store = createStore(rootReducer);
 
@@ -29,7 +30,7 @@ describe('rootReducer', () => {
 
   test("Check that ADD_KEG action works for kegMenuReducer and rootReducer", () => {
     const action = {
-      type: 'ADD_KEG',
+      type: c.ADD_KEG,
       brand: 'Brew Dr.',
       flavor: 'Uplift',
       pricePerPint: 3.50,
@@ -44,7 +45,7 @@ describe('rootReducer', () => {
 
   test('Check that TOGGLE_FORM action works for formViewReducer and rootReducer', () => {
     const action = {
-      type: 'TOGGLE_FORM'
+      type: c.TOGGLE_FORM
     }
     store.dispatch(action);
     expect(store.getState().formView).toEqual(formViewReducer(true, action));
@@ -53,7 +54,7 @@ describe('rootReducer', () => {
   test('Check that SELECT_KEG action works for selectedKegReducer and rootReducer', () => {
 
     const action = {
-      type: 'SELECT_KEG',
+      type: c.SELECT_KEG,
       id: 2,
     }
     store.dispatch(action);

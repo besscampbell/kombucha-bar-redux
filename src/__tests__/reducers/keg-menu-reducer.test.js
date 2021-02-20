@@ -1,4 +1,5 @@
 import kegMenuReducer from '../../reducers/keg-menu-reducer';
+import * as c from './../../actions/ActionTypes';
 
 describe('kegMenuReducer', () => {
 
@@ -39,7 +40,7 @@ describe('kegMenuReducer', () => {
   test('Should correctly add new keg to the keg menu', () =>{
     const { brand, flavor, pricePerPint, kegPrice, untappedKegs, pintsRemaining, id } = kegInfo;
     action = {
-      type: 'ADD_KEG',
+      type: c.ADD_KEG,
       brand,
       flavor,
       pricePerPint,
@@ -64,7 +65,7 @@ describe('kegMenuReducer', () => {
   test('Should correctly update keg using the ADD KEG action', () => {
     const { brand, flavor, pricePerPint, kegPrice, untappedKegs, pintsRemaining, id } = kegInfo;
     action = {
-      type: 'ADD_KEG',
+      type: c.ADD_KEG,
       brand: 'Brew Dr.',
       flavor: 'Uplift',
       pricePerPint: 3.50,
@@ -97,7 +98,7 @@ describe('kegMenuReducer', () => {
 
   test('Should successfully delete a keg', () => {
     action = {
-      type: 'DELETE_KEG',
+      type: c.DELETE_KEG,
       id: 2
     };
     expect(kegMenuReducer(currentState, action)).toEqual({

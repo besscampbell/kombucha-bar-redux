@@ -1,4 +1,5 @@
 import selectedKegReducer from '../../reducers/selected-keg-reducer';
+import * as c from './../../actions/ActionTypes';
 
 describe('selectedKegReducer', () => {
 
@@ -8,16 +9,16 @@ describe('selectedKegReducer', () => {
 
   test('Should correctly return id of selected keg', () => {
     const action = {
-      type: 'SELECT_KEG',
+      type: c.SELECT_KEG,
       id: 1,
     }
     expect(selectedKegReducer(null, action)).toEqual(1);
   });
 
-  // test('Should return to null when DESELECT action type is pass in', () => {
-  //   const action = {
-  //     type: 'DESELECT',
-  //   }
-  //   expect(selectedKegReducer(1, action)).toEqual(null);
-  // });
+  test('Should return to null when DESELECT action type is pass in', () => {
+    const action = {
+      type: c.DESELECT,
+    }
+    expect(selectedKegReducer(1, action)).toEqual(null);
+  });
 });
