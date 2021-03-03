@@ -1,4 +1,4 @@
-# <div align="center">Kombucha Bar</div>
+# <div align="center">Kombucha Bar + Redux</div>
 
 <p align="center">
     <br>
