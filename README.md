@@ -129,4 +129,4 @@ Once the project has been cloned and you have all the necessary items on your lo
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2021 *_Bess Cammpbell_*
+Copyright (c) 2021 *_Bess Campbell_*
